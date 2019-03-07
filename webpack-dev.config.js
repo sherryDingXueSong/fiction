@@ -51,7 +51,7 @@ module.exports = {
         }),
     ],
     resolve: {
-        extensions: ['.ts', '.tsx','.json', '.js'],
-        //alias: alias
+        extensions: ['.ts', '.tsx','.json', '.js'],//自动解析确定的扩展，能够使用户在引入模块时不用带扩展名
+        //alias: alias  //创建 import 或者 require 的别名，来确保模块引入变得更简单
     }
 }

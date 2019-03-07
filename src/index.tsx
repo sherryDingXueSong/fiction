@@ -1,6 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import {func ,func2}from './utils/test'
+import {Func}from './utils/test';
+import Main from './main';
 
 class App extends React.PureComponent{
     private array:Array<any> = [];
@@ -13,15 +14,18 @@ class App extends React.PureComponent{
         this.str= this.num.toString();
     }
     componentDidMount(){
-        console.log(func(this.str));
+        console.log(new Func().func(this.str));
         console.log("^^^^");
-        console.log(func2(this.str))
+        console.log(new Func().func2(this.str));
+        console.log("^^^^");
+        console.log(new Func().func3(this.str))
     }
 
     render(){
         return(
             <div>
                 hello world!
+                <Main />
             </div>
         )
     }
